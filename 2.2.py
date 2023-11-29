@@ -1,20 +1,19 @@
 def resheto(x = int): 
-    masive = [i for i in range(2, x + 1)]
+    array = [i for i in range(2, x + 1)]
     for i in range(2, (x // 2) + 1):
         p = 2
-        if masive:
-            while max(masive) >= (i * p):
-                if (i * p) in masive:
-                    masive.remove(i * p)
+        if array:
+            while max(array) >= (i * p):
+                if (i * p) in array:
+                    array.remove(i * p)
                 p += 1
-                if not masive:
+                if not array:
                     break
-    return masive
-
+    return array
 
 def found_prime_div(x = int):
-    masive = resheto(x)
-    for i in masive[::-1]:
+    array = resheto(x)
+    for i in array[::-1]:
         if (x % i) == 0:
             return i
 
