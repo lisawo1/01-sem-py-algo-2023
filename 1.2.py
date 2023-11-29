@@ -1,15 +1,15 @@
 def evaluate_expression(a, b, m):
-    binary_b = bin(b)[2:]  # перевожу в двоичную
+    bb = bin(b)[2:]  # перевожу в двоичную
     result = 0
 
-    for digit in binary_b:
-        result = (result * a + int(digit)) % m
+    for i in bb:
+        result = (result * a + int(i)) % m
 
     return result
 
-a = int(input("Enter the value of a: "))
-b = int(input("Enter the value of b: "))
-m = int(input("Enter the value of m: "))
+a = int(input("введите a "))
+b = int(input("введите b "))
+m = int(input("введите m "))
 
 result = evaluate_expression(a, b, m)
 print("Result:", result)
