@@ -12,7 +12,7 @@ def maxk(arr, k):
 arr = list(map(int, input("введите элементы массива: ").split()))
 k = int(input("введите число последовательных элементов: "))
 
-if maxk==True:
+if k<len(arr):
     result = maxk(arr, k)
     print("макс сумма", k, "последовательных элементов:", result)
 else:
