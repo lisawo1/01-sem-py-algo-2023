@@ -2,10 +2,10 @@ def maxk(arr, k):
     max_sum = float('-inf')
     if k<len(arr):
         for i in range(len(arr) - k + 1):
-            current_sum = sum(arr[i:i+k])  
+            cursum = sum(arr[i:i+k])  
 
-        if current_sum > max_sum:
-            max_sum = current_sum
+        if cursum > max_sum:
+            max_sum = cursum
         return max_sum
     
 
