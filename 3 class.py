@@ -2,6 +2,8 @@ class homework (object):
     def __init__(self,subject, teacher):
         self.sub=subject
         self.teach=teacher
+    def __str___(self):
+        return f"{self.sub=}"
     def how_many_tasks(self, for_page, pages):
         amount=for_page*pages
         return amount
