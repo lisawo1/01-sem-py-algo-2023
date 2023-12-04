@@ -1,9 +1,7 @@
 def polinomial(arr, x):
-    result=arr[0]*x
-    result+=arr[1]
-    for num in range(2,len(arr)):
-        result = result * x + arr[num]
-
+    result=arr[0]*x+arr[1]
+    for i in range(2,len(arr)):
+        result = result * x + arr[i]
     return result
 
 def derivative(arr, x):
@@ -12,16 +10,17 @@ def derivative(arr, x):
          proizv= proizv * x + (n-i) * arr[i]
     
     return proizv
+
 arr = []
-n = int(input("n: "))
-x = int(input("x: "))
+n = int(input("введите n: "))
+x = int(input("введите x: "))
 for a in range(n + 1):
-    b = "Введите коэф " + "x в степени " +str(n - a)
+    b = "Введите коэф перед x^" +str(n - a)+" "
     arr.append(int(input(b)))
 
 
 
 
 
-print("f(x) = ",polinomial(arr, x))
-print("f'(x) = ", derivative(arr, x))
+print("значение многочлена = ",polinomial(arr, x))
+print("производная = ", derivative(arr, x))
